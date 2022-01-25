@@ -30,4 +30,10 @@ public class DepartmentController {
         System.out.println("ID is:"+id);
         return departmentService.getDepartmentById(id);
     }
+    @DeleteMapping("/delDepartment/{did}")
+    public Department deleteDepartmentById(@PathVariable("did") Long id)
+    {
+        System.out.println("ID is:"+id);
+        return departmentService.deleteDepartmentById(id);
+    }
 }

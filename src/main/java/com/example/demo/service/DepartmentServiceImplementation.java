@@ -28,4 +28,15 @@ public class DepartmentServiceImplementation implements DepartmentService{
         System.out.println("ID is:"+id);
         return departmentRepository.findById(id);
     }
+
+    @Override
+    public Department deleteDepartmentById(Long id) {
+        if(!departmentRepository.existsById(id))
+        {
+            return null;
+        }
+        Department department = departmentRepository.findById(id).get();
+        departmentRepository.deleteById(id);
+        return department;
+    }
 }
