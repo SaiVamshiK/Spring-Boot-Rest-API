@@ -1,12 +1,14 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Department;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface DepartmentService {
     Department createDepartment(Department department);
 
     List<Department> getAllDepartments();
+
+    Optional<Department> getDepartmentById(Long id);
 }
