@@ -12,10 +12,10 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentID;
-    // refer this : https://thorben-janssen.com/jpa-generate-primary-keys/ for generating values for primary keys
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
+    // refer this : https://thorben-janssen.com/jpa-generate-primary-keys/ for generating values for primary keys
 
     @Override
     public String toString() {
