@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 // We mark beans with @Service to indicate that they're holding the business logic.
@@ -42,6 +43,17 @@ public class DepartmentServiceImplementation implements DepartmentService{
 
     @Override
     public Department updateDepartmentById(Long id, Department department) {
-        return null;
+        Department depDB = departmentRepository.findById(id).get();
+        if(Objects.nonNull(department.getDepartmentName())&&(!"".equalsIgnoreCase(department.getDepartmentName()))){
+            depDB.setDepartmentName(department.getDepartmentName());
+        }
+        if(Objects.nonNull(department.getDepartmentCode())&&(!"".equalsIgnoreCase(department.getDepartmentCode()))){
+            depDB.setDepartmentCode(department.getDepartmentCode());
+        }
+        if(Objects.nonNull(department.getDepartmentAddress())&&(!"".equalsIgnoreCase(department.getDepartmentAddress()))){
+            depDB.setDepartmentAddress(department.getDepartmentAddress());
+        }
+        departmentRepository.save(depDB);
+        return depDB;
     }
 }
