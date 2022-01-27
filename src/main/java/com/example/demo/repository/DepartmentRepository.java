@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 // @Repository’s job is to catch persistence-specific exceptions and re-throw them as one of Spring’s unified unchecked exceptions.
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Long> {
-    public Department findByDepartmentName(String departmentName);
+    public Department findByDepartmentNameIgnoreCase(String departmentName);
 }
