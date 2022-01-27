@@ -43,6 +43,9 @@ public class DepartmentServiceImplementation implements DepartmentService{
 
     @Override
     public Department updateDepartmentById(Long id, Department department) {
+        if(!departmentRepository.existsById(id)){
+            return null;
+        }
         Department depDB = departmentRepository.findById(id).get();
         if(Objects.nonNull(department.getDepartmentName())&&(!"".equalsIgnoreCase(department.getDepartmentName()))){
             depDB.setDepartmentName(department.getDepartmentName());
