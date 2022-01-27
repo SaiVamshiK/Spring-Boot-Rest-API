@@ -75,4 +75,9 @@ public class DepartmentServiceImplementation implements DepartmentService{
         return departmentRepository.findByDepartmentNameStartingWith(stDeptName);
     }
 
+    @Override
+    public List<Department> getDepartmentByCustomDname(String departmentName) {
+        return departmentRepository.getDepartmentByCustomDname(departmentName);
+    }
+
 }

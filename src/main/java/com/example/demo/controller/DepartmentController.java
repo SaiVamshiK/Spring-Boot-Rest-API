@@ -55,6 +55,10 @@ public class DepartmentController {
     {
         return departmentService.getDepartmentStartingByName(stDeptName);
     }
+    @GetMapping("/department/customName/{dname}")
+    public List<Department> getDepartmentByCustomDname(@PathVariable("dname") String departmentName){
+        return departmentService.getDepartmentByCustomDname(departmentName);
+    }
 }
 
 

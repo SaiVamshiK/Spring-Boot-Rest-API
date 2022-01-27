@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 import com.example.demo.entity.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public interface DepartmentRepository extends JpaRepository<Department,Long> {
     public List<Department> findAllByDepartmentNameIgnoreCase(String departmentName);
 
     public Department findByDepartmentNameStartingWith(String stDeptName);
+
+    @Query(value = "select * from department where department_name=?1",nativeQuery = true)
+    public List<Department> getDepartmentByCustomDname(String departmentName);
 }

@@ -21,4 +21,6 @@ public interface DepartmentService {
     List<Department> getAllDepartmentsByName(String departmentName);
 
     Department getDepartmentStartingByName(String stDeptName);
+
+    List<Department> getDepartmentByCustomDname(String departmentName);
 }
