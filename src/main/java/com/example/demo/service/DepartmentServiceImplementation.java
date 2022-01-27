@@ -70,4 +70,9 @@ public class DepartmentServiceImplementation implements DepartmentService{
         return departmentRepository.findAllByDepartmentNameIgnoreCase(departmentName);
     }
 
+    @Override
+    public Department getDepartmentStartingByName(String stDeptName) {
+        return departmentRepository.findByDepartmentNameStartingWith(stDeptName);
+    }
+
 }

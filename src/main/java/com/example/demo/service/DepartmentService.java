@@ -19,4 +19,6 @@ public interface DepartmentService {
     Department getDepartmentByName(String departmentName);
 
     List<Department> getAllDepartmentsByName(String departmentName);
+
+    Department getDepartmentStartingByName(String stDeptName);
 }

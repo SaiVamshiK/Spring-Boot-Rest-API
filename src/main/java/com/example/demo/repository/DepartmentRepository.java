@@ -13,4 +13,6 @@ public interface DepartmentRepository extends JpaRepository<Department,Long> {
     public Department findByDepartmentNameIgnoreCase(String departmentName);
 
     public List<Department> findAllByDepartmentNameIgnoreCase(String departmentName);
+
+    public Department findByDepartmentNameStartingWith(String stDeptName);
 }

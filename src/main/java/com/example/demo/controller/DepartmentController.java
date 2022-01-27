@@ -50,5 +50,24 @@ public class DepartmentController {
         return departmentService.getAllDepartmentsByName(departmentName);
     }
     // https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods = Custom Query Methods.
-
+    @GetMapping("/department/stname/{name}")
+    public Department getDepartmentStartingByName(@PathVariable("name") String stDeptName)
+    {
+        return departmentService.getDepartmentStartingByName(stDeptName);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
