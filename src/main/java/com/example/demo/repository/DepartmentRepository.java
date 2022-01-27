@@ -12,5 +12,5 @@ import java.util.List;
 public interface DepartmentRepository extends JpaRepository<Department,Long> {
     public Department findByDepartmentNameIgnoreCase(String departmentName);
 
-    public List<Department> findAllByDepartmentName(String departmentName);
+    public List<Department> findAllByDepartmentNameIgnoreCase(String departmentName);
 }
