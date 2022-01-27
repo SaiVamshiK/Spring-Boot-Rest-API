@@ -59,6 +59,10 @@ public class DepartmentController {
     public List<Department> getDepartmentByCustomDname(@PathVariable("dname") String departmentName){
         return departmentService.getDepartmentByCustomDname(departmentName);
     }
+    @GetMapping("/department/sorted")
+    public List<Department> getDepartmentsSorted(){
+        return departmentService.getDepartmentsSorted();
+    }
 }
 
 

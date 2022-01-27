@@ -80,4 +80,9 @@ public class DepartmentServiceImplementation implements DepartmentService{
         return departmentRepository.getDepartmentByCustomDname(departmentName);
     }
 
+    @Override
+    public List<Department> getDepartmentsSorted() {
+        return departmentRepository.getDepartmentsSorted();
+    }
+
 }
