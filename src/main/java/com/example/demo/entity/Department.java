@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
@@ -11,6 +13,8 @@ import javax.validation.constraints.*;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Department {
     // @Entity specifies that department is the table in data jpa
     // id is the primary key for the department table
