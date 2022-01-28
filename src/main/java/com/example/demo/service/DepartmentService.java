@@ -25,4 +25,6 @@ public interface DepartmentService {
     List<Department> getDepartmentByCustomDname(String departmentName);
 
     List<Department> getDepartmentsSorted();
+
+    List<Department> getDeptByNameAdd(String departmentName, String departmentAdd);
 }

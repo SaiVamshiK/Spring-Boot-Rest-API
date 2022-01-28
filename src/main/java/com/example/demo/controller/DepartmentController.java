@@ -63,6 +63,10 @@ public class DepartmentController {
     public List<Department> getDepartmentsSorted(){
         return departmentService.getDepartmentsSorted();
     }
+    @GetMapping("/department/name/{dname}/add/{dadd}")
+    public List<Department> getDeptByNameAdd(@PathVariable("dname") String departmentName,@PathVariable("dadd") String departmentAdd){
+        return departmentService.getDeptByNameAdd(departmentName,departmentAdd);
+    }
 }
 
 

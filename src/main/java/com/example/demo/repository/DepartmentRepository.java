@@ -22,4 +22,6 @@ public interface DepartmentRepository extends JpaRepository<Department,Long> {
 
     @Query(value = "select * from department order by department_name",nativeQuery = true)
     public List<Department> getDepartmentsSorted();
+
+    List<Department> findByDepartmentNameAndDepartmentAddress(String departmentName, String departmentAdd);
 }

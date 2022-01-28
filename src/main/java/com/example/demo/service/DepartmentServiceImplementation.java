@@ -85,4 +85,9 @@ public class DepartmentServiceImplementation implements DepartmentService{
         return departmentRepository.getDepartmentsSorted();
     }
 
+    @Override
+    public List<Department> getDeptByNameAdd(String departmentName, String departmentAdd) {
+        return departmentRepository.findByDepartmentNameAndDepartmentAddress(departmentName,departmentAdd);
+    }
+
 }
