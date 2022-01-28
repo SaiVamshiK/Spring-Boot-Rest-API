@@ -20,12 +20,14 @@ public class DepartmentController {
     @PostMapping("/createDepartment")
     public Department createDepartment(@Valid @RequestBody Department department)
     {
+        logger.info("Create department called!!!");
         System.out.println("Create method called");
         return departmentService.createDepartment(department);
     }
     @GetMapping("/departments")
     public List<Department> getAllDepartments()
     {
+        logger.info("Get ALl departments called!!!");
         return departmentService.getAllDepartments();
     }
     @GetMapping("/department/{did}")
