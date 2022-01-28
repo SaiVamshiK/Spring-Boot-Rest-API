@@ -5,6 +5,7 @@ import com.example.demo.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,7 +15,7 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @PostMapping("/createDepartment")
-    public Department createDepartment(@RequestBody Department department)
+    public Department createDepartment(@Valid @RequestBody Department department)
     {
         System.out.println("Create method called");
         return departmentService.createDepartment(department);
